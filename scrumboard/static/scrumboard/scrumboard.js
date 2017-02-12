@@ -19,6 +19,14 @@
                     });
             };
 
+            $scope.login = function(){
+                $http.post('/auth_api/login/',
+                    {
+                        username: 'luisdeolpy',
+                        password: 'luisdeolpy'
+                    });
+            };
+
             $scope.data = [];
             $http.get('/scrumboard/lists/')
                 .then(function(response){
